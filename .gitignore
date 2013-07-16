@@ -1,0 +1,5 @@
+!precise/
+precise/*
+!precise/charms/
+precise/charms/*
+!precise/charms/monkey
