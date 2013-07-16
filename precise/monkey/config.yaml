@@ -1,0 +1,17 @@
+options:
+  server_root:
+    type: string
+    default: "/srv/www"
+    description: "Location of static files."
+  port:
+    type: int
+    default: 80
+    description: "Port that Monkey will listen on."
+  symlink:
+    type: int
+    default: 0
+    description: "Allow request to symbolic links."
+  run_as:
+    type: string
+    default: "nobody"
+    description: "User to run Monkey as."

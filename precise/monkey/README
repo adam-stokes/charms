@@ -1,0 +1,29 @@
+Juju charm monkey
+=================
+
+:Author: Adam Stokes <adam.stokes@ubuntu.com>
+
+How to configure the charm
+--------------------------
+
+To deploy a charm with this subordinate it must minimaly:
+
+  1. Provide the http interface
+  2. Set the `static_dir` relation variable in the website hook.
+
+Example deployment
+------------------
+
+Deployment with python-moinmoin for example::
+
+    juju bootstrap
+    juju deploy python-django
+    juju deploy monkey
+    juju add-relation monkey python-django
+    juju expose python-django
+
+Changelog
+---------
+
+    * Initial charm
+

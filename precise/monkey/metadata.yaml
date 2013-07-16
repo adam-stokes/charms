@@ -1,0 +1,23 @@
+name: monkey
+summary: Monkey
+maintainer: Adam Stokes <adam.stokes@ubuntu.com>
+categories: ["misc"]
+description: |
+  fast, efficient, small and easy to configure web server
+  Monkey is a small, fast, and easily configurable HTTP/1.1 compliant web
+  server. It implements the following features:
+
+   * multi-threading
+   * support for MIME
+   * resume
+   * virtual hosts
+   * CGI and PHP
+   * directory navigation
+   * basic security features (denying access to certain URLs and IPs)
+   * translated documentation
+subordinate: true
+requires:
+    website:
+       interface: http
+       scope: container
+       optional: true

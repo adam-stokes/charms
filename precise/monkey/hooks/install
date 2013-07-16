@@ -1,0 +1,14 @@
+#!/bin/bash
+
+apt-get -y update
+apt-get install monkey
+
+export STATIC_PATH=$(config-get server_root)
+export RUN_AS=$(config-get run_as)
+export SYMLINK=$(config-get symlink)
+export PORT=$(config-get port)
+export SERVERNAME=$(unit-get public-address)
+
+cheetah fill --env -p templates/monkey.conf.tmpl > /etc/monkey/monkey.conf
+
+open-port 80/tcp
