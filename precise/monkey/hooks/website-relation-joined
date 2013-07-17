@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export STATIC_PATH=$(config-get server_root)
+export SERVER_ROOT=$(config-get server_root)
 export RUN_AS=$(config-get run_as)
 export SYMLINK=$(config-get symlink)
 export PORT=$(config-get port)
